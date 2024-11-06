@@ -21,7 +21,12 @@
         align-items: center;
         width: 360px;
         height: 80px;
-        gap:20px;
+
+        &-buttons{
+            display: flex;
+            gap:20px;
+
+        }
 
     
         .share-icon{

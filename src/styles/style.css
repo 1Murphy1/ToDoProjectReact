@@ -181,6 +181,9 @@ button {
   align-items: center;
   width: 360px;
   height: 80px;
+}
+.shareContainer-content-buttons {
+  display: flex;
   gap: 20px;
 }
 .shareContainer-content .share-icon {
