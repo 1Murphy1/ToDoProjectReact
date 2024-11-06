@@ -18,13 +18,15 @@ function TodoItem({ task, onDelete, onEdit, onShare, onDragStart, onDrop, onDrag
             </div>
             {isActionPanelVisible && (
                 <div className="task-action-panel">
-                    <button className="share yellowOutline" onClick={(e) => { e.stopPropagation(); onShare(task.id); }}>
-                        <img src="../src/icons/shareButton.svg" alt="Share" />
-                    </button>
-                    <button className="info yellowOutline">i</button>
-                    <button className="edit yellowOutline" onClick={(e) => { e.stopPropagation(); onEdit(task); }}>
-                        <img src="../src/icons/editButton.svg" alt="Edit" />
-                    </button>
+                    <div className="task-action-panel-buttons">
+                        <button className="share yellowOutline" onClick={(e) => { e.stopPropagation(); onShare(task.id); }}>
+                            <img src="../src/icons/shareButton.svg" alt="Share" />
+                        </button>
+                        <button className="info yellowOutline">i</button>
+                        <button className="edit yellowOutline" onClick={(e) => { e.stopPropagation(); onEdit(task); }}>
+                            <img src="../src/icons/editButton.svg" alt="Edit" />
+                        </button>
+                    </div>
                 </div>
             )}
         </div>

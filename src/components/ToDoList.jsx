@@ -53,6 +53,23 @@ function TodoList() {
         setTasks(tasks.map((task) => (task.id === editTask.id ? { ...task, title: newTitle, about: newAbout } : task)));
         setEditModalOpen(false);
     };
+// NEW
+    const handleDragStart = (e, index) => {
+        e.dataTransfer.setData('index', index);
+    };
+
+    const handleDragOver = (e) => {
+        e.preventDefault();
+    };
+
+    const handleDrop = (e, index) => {
+        const fromIndex = e.dataTransfer.getData('index');
+        const updatedTasks = [...tasks];
+        const draggedTask = updatedTasks[fromIndex];
+        updatedTasks.splice(fromIndex, 1);
+        updatedTasks.splice(index, 0, draggedTask);
+        setTasks(updatedTasks);
+    };
 
     return (
         <div className="createTaskContainer">
@@ -61,14 +78,23 @@ function TodoList() {
                 {tasks.length === 0 ? (
                     <p className="task-list-none">No tasks</p>
                 ) : (
-                    tasks.map((task) => (
-                        <TodoItem
+                    tasks.map((task, index) => (
+                        <div
                             key={task.id}
-                            task={task}
-                            onDelete={handleDeleteTask}
-                            onEdit={handleEditTask}
-                            onShare={() => setShareModalOpen(true)}
-                        />
+                            className="taskContainer"
+                            draggable
+                            onDragStart={(e) => handleDragStart(e, index)}
+                            onDragOver={handleDragOver}
+                            onDrop={(e) => handleDrop(e, index)}
+                            data-task-id={task.id}
+                        >
+                            <TodoItem
+                                task={task}
+                                onDelete={handleDeleteTask}
+                                onEdit={handleEditTask}
+                                onShare={() => setShareModalOpen(true)}
+                            />
+                        </div>
                     ))
                 )}
             </div>
