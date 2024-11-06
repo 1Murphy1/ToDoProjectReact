@@ -15,3 +15,5 @@ function DeleteConfirmationModal({ onConfirm, onCancel }) {
         </div>
     );
 }
+
+export default DeleteConfirmationModal;

@@ -19,3 +19,6 @@ function EditModal({ task, onSave, onClose }) {
         </div>
     );
 }
+export default EditModal;
+
+
