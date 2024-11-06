@@ -1,0 +1,56 @@
+.taskContainer{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: calc(100% - 20px);
+    align-items: flex-end;
+
+
+    .newTask-container{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+
+        &-text{
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            word-wrap: break-word; 
+
+            h3{
+                margin: 0;
+                font-size: 18px;
+            }
+            p{
+                margin: 4px 0 0 0;
+                font-size: 14px;
+            }
+        }
+
+        button{
+            height: 32px;
+            width: 32px;
+        }
+
+    }
+
+    .task-action-panel{
+        display: flex;
+        
+        &-buttons{
+            width: 124px;
+            height: 36px;
+            gap: 7px;
+            display: flex;
+            margin-top: 8px;
+            button{
+                width: 36px;
+                height: 36px;
+                font-size: 20px;
+            }
+            
+        }
+    }
+}

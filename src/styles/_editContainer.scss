@@ -1,0 +1,72 @@
+.editContainer{
+    position: fixed;
+    top: 50%;     
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    background-color:#070707E3;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  
+    &-content{
+      position: fixed;
+      bottom: 0;     
+      left: 50%;
+      transform: translateX(-50%); 
+      background-color: #1B1A17;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 360px;
+      height: 450px;
+      flex-direction: column;
+  
+      &-action{
+        
+        max-width: 330px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+  
+        .editTitle{
+          width: 324px;
+          height: 32px;
+          color: #F0E3CA;
+          font-size: 14px;
+          resize: none;
+          margin-bottom: 10px;
+        }
+        .editAbout{
+          width: 324px;
+          height: 343px;
+          color: #F0E3CA;
+          font-size: 14px;
+          font-weight: 400;
+          vertical-align: top;
+          resize: none;
+        }
+  
+        .editButtons{
+          display: flex;
+          margin: 8px;  
+          gap: 12px;          
+  
+          button{
+            width: 64px;
+            height: 24px;
+            font-size: 15px;
+            font-weight: 400;
+            color: #D9D9D9;
+                
+          }
+  
+        }
+  
+      }
+  
+    }
+  
+  }
+  

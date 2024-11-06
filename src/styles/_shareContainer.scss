@@ -1,0 +1,40 @@
+.shareContainer{
+    position: fixed;
+    top: 50%;     
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    background-color:#070707E3;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+
+    &-content{
+        position: fixed;
+        bottom: 0;     
+        left: 50%;
+        transform: translateX(-50%); 
+        background-color: #1B1A17;
+        border-radius: 20px 20px 0 0; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 360px;
+        height: 80px;
+        gap:20px;
+
+    
+        .share-icon{
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none; 
+            background-color: #1F1E1B;           
+                       
+        }
+    }
+
+}
