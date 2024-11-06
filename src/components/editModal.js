@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 function EditModal({ task, onSave, onClose }) {
     const [newTitle, setNewTitle] = useState(task.title);
     const [newAbout, setNewAbout] = useState(task.about);
